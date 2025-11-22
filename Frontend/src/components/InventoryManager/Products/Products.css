@@ -1,0 +1,136 @@
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 16px;
+}
+
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.products-header h1 {
+  font-size: 28px;
+  margin: 0;
+  padding-bottom: 6px;
+}
+
+.search-input {
+  background: #f1f5f9; /* light gray */
+  border: 2px solid #6366f1;
+  color: #111827; /* gray-900 */
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  max-width: 300px; 
+  width: 100%; 
+
+}
+
+
+.search-input::placeholder {
+  color: #6b7280; 
+  opacity: 0.7;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #202020; 
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+}
+
+.products-table-wrapper {
+  overflow-x: auto;
+}
+
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid #6366f1;
+  background: #f8fafc; 
+}
+
+.products-table thead {
+  background: #e0f2fe; 
+}
+
+.products-table th {
+  color: #1e40af; 
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 13px;
+  border-right: 1px solid #c7d2fe; 
+}
+
+.products-table th:last-child {
+  border-right: none;
+}
+
+.products-table td {
+  color: #111827; /* gray-900 */
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb; /* gray-200 */
+  border-right: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+
+.products-table td:last-child {
+  border-right: none;
+}
+
+.product-row:hover {
+  background: #e5e7eb; /* light gray hover */
+  cursor: pointer;
+}
+
+.product-id {
+  color: #6366f1; /* violet-500 */
+  font-weight: 600;
+}
+
+.editable-stock {
+  cursor: pointer;
+  color: #22c55e; /* green-500 */
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.editable-stock:hover {
+  color: #16a34a; /* green-600 */
+}
+
+.edit-input {
+  background: #f1f5f9;
+  border: 2px solid #6366f1;
+  color: #111827;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 70px;
+}
+
+.edit-input:focus {
+  outline: none;
+  border-color: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+}
+
+@media (max-width: 768px) {
+  .products-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .products-table th,
+  .products-table td {
+    padding: 8px;
+    font-size: 12px;
+  }
+}

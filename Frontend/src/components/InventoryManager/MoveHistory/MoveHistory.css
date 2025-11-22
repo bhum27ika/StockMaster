@@ -1,0 +1,147 @@
+.move-history {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.history-header h1 {
+  font-size: 32px;
+  color: #ff6b35;
+  margin: 0;
+  border-bottom: 2px solid #ff6b35;
+  padding-bottom: 8px;
+}
+
+.history-header .search-input {
+  flex: 1;
+  background: #1a1a2e;
+  border: 2px solid #ff6b35;
+  color: #00d4ff;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.history-header .search-input::placeholder {
+  color: #00d4ff;
+}
+
+.history-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.new-btn {
+  background: transparent;
+  border: 2px solid #ff6b35;
+  color: #ff6b35;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.view-toggles {
+  display: flex;
+  gap: 8px;
+}
+
+.toggle-btn {
+  background: #1a1a2e;
+  border: 2px solid #ff6b35;
+  color: #ff6b35;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.toggle-btn.active {
+  background: #ff6b35;
+  color: #1a1a2e;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1a1a2e;
+  border: 2px solid #ff6b35;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.history-table thead {
+  background: #2d2d44;
+  border-bottom: 2px solid #ff6b35;
+}
+
+.history-table th {
+  color: #ff6b35;
+  padding: 14px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 13px;
+  border-right: 1px solid #00d4ff;
+}
+
+.history-table th:last-child {
+  border-right: none;
+}
+
+.history-table td {
+  color: #00d4ff;
+  padding: 14px;
+  border-bottom: 1px solid #2d2d44;
+  border-right: 1px solid #2d2d44;
+  font-size: 14px;
+}
+
+.history-table td:last-child {
+  border-right: none;
+}
+
+.history-table tbody tr:hover {
+  background: #2d2d44;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-badge.in {
+  background: #00ff88;
+  color: #000;
+}
+
+.status-badge.out {
+  background: #ff6b35;
+  color: #1a1a2e;
+}
+
+.history-note {
+  background: #1a1a2e;
+  border: 2px solid #ff6b35;
+  border-radius: 8px;
+  padding: 16px;
+  color: #ff6b35;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.history-note p {
+  margin: 4px 0;
+}

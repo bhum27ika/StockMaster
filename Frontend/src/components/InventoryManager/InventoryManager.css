@@ -1,0 +1,22 @@
+.manager-container {
+  display: flex;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.manager-content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+  background: #ededed;
+}
+
+@media (max-width: 768px) {
+  .manager-container {
+    flex-direction: column;
+  }
+
+  .manager-content {
+    padding: 20px;
+  }
+}

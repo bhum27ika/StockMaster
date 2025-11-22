@@ -1,0 +1,166 @@
+.receipts-view {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.view-header {
+  margin-bottom: 10px;
+}
+
+.view-header h1 {
+  font-size: 28px;
+  color: #1a1f35;
+  margin: 0 0 6px 0;
+}
+
+.view-header p {
+  color: #718096;
+  font-size: 14px;
+  margin: 0;
+}
+
+.receipts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 16px;
+}
+
+.receipt-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-left: 4px solid #00d4ff;
+}
+
+.receipt-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.receipt-top h3 {
+  color: #1a1f35;
+  font-size: 18px;
+  margin: 0 0 4px 0;
+  font-weight: 700;
+}
+
+.receipt-supplier {
+  color: #718096;
+  font-size: 13px;
+  margin: 0;
+}
+
+.receipt-status {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.receipt-status.pending {
+  background: #feebc8;
+  color: #7c2d12;
+}
+
+.receipt-status.arrived {
+  background: #bee3f8;
+  color: #2c5282;
+}
+
+.receipt-status.received {
+  background: #c6f6d5;
+  color: #22543d;
+}
+
+.receipt-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px 0;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.info-item .label {
+  color: #718096;
+  font-weight: 500;
+}
+
+.info-item .value {
+  color: #1a1f35;
+  font-weight: 600;
+}
+
+.receipt-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.action-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.mark-arrived {
+  background: #bee3f8;
+  color: #2c5282;
+}
+
+.mark-arrived:hover {
+  background: #90cdf4;
+  transform: translateY(-2px);
+}
+
+.mark-received {
+  background: #c6f6d5;
+  color: #22543d;
+}
+
+.mark-received:hover {
+  background: #9ae6b4;
+  transform: translateY(-2px);
+}
+
+.status-complete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  background: #f7fafc;
+  color: #2d3748;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .receipts-container {
+    grid-template-columns: 1fr;
+  }
+
+  .receipt-top {
+    flex-direction: column;
+  }
+}
