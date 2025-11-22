@@ -1,11 +1,13 @@
 import mongoose from "mongoose";
 
-export const connectDB = async () => {
+const connectDB = async () => {
   try {
-    await mongoose.connect("mongodb://127.0.0.1:27017/stockmaster");
-    console.log("MongoDB Connected (Compass Local)");
+    await mongoose.connect(process.env.MONGO_URI);
+    console.log("MongoDB connected");
   } catch (error) {
-    console.error("MongoDB Connection Failed", error);
+    console.error("DB connection error:", error);
     process.exit(1);
   }
 };
+
+export default connectDB;
